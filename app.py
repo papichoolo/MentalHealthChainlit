@@ -3,7 +3,8 @@ import chainlit as cl
 import os
 huggingfacehub_api_token = os.environ['HUGGINGFACEHUB_API_TOKEN']
 
-from langchain import HuggingFaceHub, PromptTemplate, LLMChain
+from langchain import HuggingFaceHub, PromptTemplate, LLMChain\
+from langchain.memory import ConversationBufferMemory
 
 repo_id = "meta-llama/Llama-2-7b-chat-hf"
 llm = HuggingFaceHub(huggingfacehub_api_token=huggingfacehub_api_token, 
