@@ -1,4 +1,4 @@
-# Falcon LLM with LangChain Chat UI
+# LLama2 with LangChain Chat UI
 
 This repository contains the necessary files and instructions to run Falcon LLM 7b with LangChain and interact with a chat user interface using Chainlit. Follow the steps below to set up and run the chat UI.
 
