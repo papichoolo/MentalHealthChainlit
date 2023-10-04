@@ -28,7 +28,8 @@ template+=human_msg
 @cl.on_chat_start
 def main():
     # Instantiate the chain for that user session
-    prompt = PromptTemplate(template=template, input_variables=["question"])
+    prompt = PromptTemplate(input_variables=["chat_history", "human_input"], template=template)
+    memory = ConversationBufferMemory(memory_key="chat_history")
     llm_chain = LLMChain(prompt=prompt, llm=llm, verbose=True)
 
     # Store the chain in the user session
